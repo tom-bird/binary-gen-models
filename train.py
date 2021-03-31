@@ -16,9 +16,6 @@ from datasets import dataset_registry
 from models import model_registry, init_mode
 from utils import transfer_params
 
-LABEL = os.environ.get("LABEL", "no_tag")
-CODE_DIR = os.environ.get("CODE_DIR", os.getcwd())
-
 
 def run_epoch(epoch, model, train_loader, optimizer, device, log_interval, max_gnorm, logger):
     model.train()
@@ -168,9 +165,7 @@ def train(dataset, model, batch_size, test_batch_size, lr, gamma, max_gnorm, num
     print('warming up...\n')
     warmup(model, train_loader, device, warmup_batches, logger)
 
-    print('warmup finished')
-    # evaluate(0, model, test_loader, device, logger, save_params, binarised)
-    # sample(0, model, device, 64, logger)
+    print('warmup finished\n')
     for epoch in range(1, epochs + 1):
         run_epoch(epoch, model, train_loader, optimizer, device, log_interval, max_gnorm, logger)
         evaluate(epoch, model, test_loader, device, logger, save_params, binarised)
