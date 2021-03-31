@@ -17,6 +17,6 @@ model_registry = {
     'flow_pp': lambda **kwargs: CifarFlowPP(hdim=120, blocks=10, dequant_blocks=2, mix_components=8, attn_version=False,
                                             force_float32_cond=False, dropout=0.2, **kwargs),
     'flow_pp_wide': lambda **kwargs: CifarFlowPP(hdim=180, blocks=10, dequant_blocks=2, mix_components=8, attn_version=False,
-                                            force_float32_cond=False, dropout=0.2, **kwargs)
+                                                 force_float32_cond=False, dropout=0.2, **kwargs)
 
 }

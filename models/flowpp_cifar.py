@@ -86,7 +86,8 @@ class FlowModel(nn.Module):
 
 class CifarFlowPP(FlowModel):
     def __init__(self, *, hdim=96, blocks=10, dequant_blocks=2, mix_components=32, attn_heads=4, attn_version=True,
-                 pdrop=0.2, force_float32_cond, binarised=False, use_reslayers=True, fp_acts=False, **kwargs):
+                 pdrop=0.2, force_float32_cond, binarised=False, binarised_act=False, use_reslayers=True, **kwargs):
+        fp_acts = not binarised_act
         def coupling(cf_shape_, for_dequant=False):
             return [
                 Parallel([lambda: Normalize(cf_shape_)] * 2),

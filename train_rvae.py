@@ -175,9 +175,9 @@ def train(dataset, model, batch_size, test_batch_size, lr, gamma, max_gnorm, num
     print("warmup")
     warmup(model, train_loader, device, warmup_batches, logger)
     print("eval")
-    evaluate(0, model, test_loader, device, logger, save_params, binarised)
-    sample(0, model, device, 64, logger)
-    reconstruct(0, model, test_loader, device, 32, logger)
+    # evaluate(0, model, test_loader, device, logger, save_params, binarised)
+    # sample(0, model, device, 64, logger)
+    # reconstruct(0, model, test_loader, device, 32, logger)
     print("train")
     for epoch in range(1, epochs + 1):
         run_epoch(epoch, model, train_loader, optimizer, lr_step, device, log_interval, max_gnorm, logger)
