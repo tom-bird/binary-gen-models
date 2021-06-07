@@ -1,6 +1,6 @@
 # Reducing the Computational Cost of Deep Generative Models with Binary Neural Networks
 
-This is the code to accompany the ICLR 2021 paper 'Reducing the Computational Cost of Deep Generative Models with Binary Neural Networks' by [Thomas Bird](https://tom-bird.github.io/), [Friso H. Kingma](https://fhkingma.github.io/) and [David Barber](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php).
+This is the code to accompany the ICLR 2021 paper ['Reducing the Computational Cost of Deep Generative Models with Binary Neural Networks'](https://arxiv.org/abs/2010.13476) by [Thomas Bird](https://tom-bird.github.io/), [Friso H. Kingma](https://fhkingma.github.io/) and [David Barber](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php).
 
 If you find this work useful, please do cite us:
 
